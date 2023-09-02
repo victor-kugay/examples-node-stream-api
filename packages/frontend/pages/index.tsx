@@ -1,8 +1,16 @@
 import React, {ChangeEventHandler} from 'react';
-
+import {DIContainer} from '../src/ui/common/DiContainer';
 import {useApi} from '../src/ui/hooks/di';
 
 export default function MainPage(): JSX.Element {
+  return (
+    <DIContainer>
+      <MainPageContent />
+    </DIContainer>
+  );
+}
+
+function MainPageContent(): JSX.Element {
   const api = useApi();
 
   const uploadFile = async (file: File): Promise<void> => {
