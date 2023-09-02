@@ -2,6 +2,6 @@ import {createInjectionHooks} from 'brandi-react';
 
 import {DI_TOKENS} from '../../di/tokens';
 
-const [useWindow] = createInjectionHooks(DI_TOKENS.window);
+const [useApi] = createInjectionHooks(DI_TOKENS.api);
 
-export {useWindow};
+export {useApi};
