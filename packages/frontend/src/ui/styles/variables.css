@@ -1,0 +1,10 @@
+:root {
+  --duration: 0.2s;
+  --timing: ease-in-out;
+
+  --grid-padding: 24px;
+  --grid-content-fluid: calc(512px + 2 * var(--grid-padding));
+  --grid-content-tablet: calc(864px + 2 * var(--grid-padding));
+  --grid-content-desktop: calc(1200px + 2 * var(--grid-padding));
+  --grid-content-desktop-large: calc(1200px + 2 * var(--grid-padding));
+}
