@@ -1,22 +1,19 @@
-import {DataSource as TypeOrmDataSource} from 'typeorm';
-import {PgDataSource} from '../frameworks/data-sources';
+import {HandleFileUseCase} from './files';
 import {Module, Provider} from '@nestjs/common';
-import {DataSource} from '../domain';
+import {FormidableFileHandler} from '../frameworks/files-handler';
+import {AbstractFileHandler} from '../domain';
 
-const useCases: Provider[] = [];
+const useCases: Provider[] = [HandleFileUseCase];
+
+const frameworks: Provider[] = [
+  {
+    provide: AbstractFileHandler,
+    useClass: FormidableFileHandler,
+  },
+];
 
 @Module({
-  providers: [
-    {
-      provide: DataSource<TypeOrmDataSource>,
-      useFactory: async () => {
-        const dataSource: DataSource<TypeOrmDataSource> = new PgDataSource();
-        await dataSource.initialize();
-        return dataSource;
-      },
-    },
-    ...useCases,
-  ],
+  providers: [...useCases, ...frameworks],
   exports: [...useCases],
 })
 export class UseCasesModule {}
