@@ -1,8 +1,8 @@
-# Examples Node High Water Mark
+# Examples Node Stream API
 
 ## Description
 
-This repo illustrates nodejs stream api mechanics and high water mark in particular.
+This repo illustrates nodejs stream api mechanics.
 
 ## Start
 
