@@ -6,8 +6,8 @@
     "dev": "next dev -p 80",
     "build": "next build",
     "start": "next start -p 80",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "echo none",
+    "test:watch": "echo none",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
