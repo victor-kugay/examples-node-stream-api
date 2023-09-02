@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+HOOK=true yarn typecheck && yarn test
