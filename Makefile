@@ -18,3 +18,6 @@ up:
 	
 dev:
 	yarn dev
+
+cli:
+	yarn start:cli

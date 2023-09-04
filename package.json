@@ -17,6 +17,7 @@
     "start": "run-p start:*",
     "start:backend": "yarn workspace backend start",
     "start:frontend": "yarn workspace frontend start",
+    "start:cli": "yarn workspace cli start",
     "dev": "run-p dev:*",
     "dev:backend": "yarn workspace backend dev",
     "dev:frontend": "yarn workspace frontend dev",
@@ -29,8 +30,8 @@
     "test": "run-p test:*",
     "test:frontend": "yarn workspace frontend test",
     "test:backend": "yarn workspace backend test",
-    "format": "prettier --write \"packages/**/*.{ts,tsx,css}\"",
-    "lint": "eslint \"packages/**/*.{ts,tsx}\"",
+    "format": "prettier --write \"{packages,scripts}/**/*.{ts,tsx,css}\"",
+    "lint": "eslint \"{packages,scripts}/**/*.{ts,tsx}\"",
     "postinstall": "husky install",
     "commit": "git-cz"
   },

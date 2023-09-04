@@ -1,0 +1,43 @@
+{
+  "name": "cli",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node src",
+    "dev": "echo none",
+    "build": "echo none",
+    "test": "echo none",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "1.4.0",
+    "commander": "11.0.0",
+    "inquirer": "9.2.10",
+    "uuid": "9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "9.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "roots": [
+      "src",
+      "tests"
+    ],
+    "transform": {
+      ".+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "coverage",
+    "setupFiles": [
+      "dotenv/config"
+    ],
+    "testEnvironment": "node"
+  }
+}
