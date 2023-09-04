@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  examples_node_stream_api_backend:
+    container_name: examples_node_stream_api_backend
+    restart: no
+    build:
+      context: ../
+      dockerfile: ./provision/Dockerfile.backend
+    ports:
+      - 3000:3000
+    environment:
+      HELLO: world
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 256MB
+        reservations:
+          cpus: '1'
+          memory: 256MB
+
+  examples_node_stream_api_frontend:
+    container_name: examples_node_stream_api_frontend
+    restart: no
+    build:
+      context: ../
+      dockerfile: ./provision/Dockerfile.frontend
+    ports:
+      - 80:80
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 256MB
+        reservations:
+          cpus: '1'
+          memory: 256MB

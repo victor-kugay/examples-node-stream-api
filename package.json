@@ -14,6 +14,9 @@
     "packages/*"
   ],
   "scripts": {
+    "start": "run-p start:*",
+    "start:backend": "yarn workspace backend start",
+    "start:frontend": "yarn workspace frontend start",
     "dev": "run-p dev:*",
     "dev:backend": "yarn workspace backend dev",
     "dev:frontend": "yarn workspace frontend dev",
