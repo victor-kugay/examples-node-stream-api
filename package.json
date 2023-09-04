@@ -33,7 +33,7 @@
     "test": "run-p test:*",
     "test:frontend": "yarn workspace frontend test",
     "test:backend": "yarn workspace backend test",
-    "test:cli": "yarn workspace backend cli",
+    "test:cli": "yarn workspace cli test",
     "format": "prettier --write \"{packages,scripts}/**/*.{ts,tsx,css}\"",
     "lint": "eslint \"{packages,scripts}/**/*.{ts,tsx}\"",
     "postinstall": "husky install",
